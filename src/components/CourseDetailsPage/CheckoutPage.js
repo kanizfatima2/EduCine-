@@ -11,7 +11,7 @@ const CheckoutPage = () => {
             <h2 className='text-center font-bold text-lg mt-12'>Make Payment</h2>
             <div className='bg-green-200 p-5 mt-5'>
                 <form>
-                    <h2 className='text-4xl font-semibold text-center mb-5'> <span className='text-orange-600'>{title}</span></h2>
+                    <h2 className='text-4xl font-semibold text-center mb-5'> <span className='text-orange-600'>Course name: {title}</span></h2>
                     <h4 className='text-2xl font-semibold text-center mb-5 '>Price: $200</h4>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 '>
                         <input type="text" name="fname" placeholder="Full name" className="input input-bordered w-full" required />

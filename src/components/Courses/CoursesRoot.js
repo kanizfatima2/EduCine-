@@ -46,7 +46,7 @@ const CoursesRoot = () => {
                 </div>
             </div>
 
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     );
 };

@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { AuthContext } from './Context/AuthProvider';
 
 const Login = () => {
-    const { signIn, GoogleLogin } = useContext(AuthContext);
+    const { signIn, GoogleLogin, GithubLogin } = useContext(AuthContext);
 
     const [loginError, setLoginError] = useState('');
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -50,6 +50,20 @@ const Login = () => {
             })
     }
 
+    //Github Login
+    const handleGithub = () => {
+        GithubLogin()
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+
+            })
+            .catch(err => {
+                console.error(err.message)
+                setLoginError(err.message)
+            })
+    }
+
 
     return (
         <div>
@@ -83,7 +97,8 @@ const Login = () => {
                     <p><small>New to EduCine?</small> <Link to='/signup' className='text-info text-md font-bold focus:underline hover:underline'>Create an Account</Link></p>
 
                     <div className="divider divide-white">OR</div>
-                    <button onClick={handleGoogle} className='btn btn-outline w-full text-white'>CONTINUE WITH GOOGLE</button>
+                    <button onClick={handleGoogle} className='btn btn-outline w-full text-cyan-500'>CONTINUE WITH GOOGLE</button>
+                    <button onClick={handleGithub} className='btn btn-outline w-full mt-2 text-orange-500'>CONTINUE WITH GITHUB</button>
                 </div>
 
             </div>

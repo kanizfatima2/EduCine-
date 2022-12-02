@@ -1,10 +1,18 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../Authentication/Context/AuthProvider';
+import Loading from '../Shared/Loading';
 
 const CourseDetail = () => {
+    const { loading } = useContext(AuthContext)
     const courseDetails = useLoaderData();
     console.log(courseDetails)
     const { rating, total_view, title, image, details, instructor, _id } = courseDetails
+
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     return (
         <div>

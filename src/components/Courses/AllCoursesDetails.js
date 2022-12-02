@@ -1,8 +1,15 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Authentication/Context/AuthProvider';
+import Loading from '../Shared/Loading';
 
 const AllCoursesDetails = ({ courses }) => {
+    const { loading } = useContext(AuthContext)
     const { rating, total_view, title, image, details, instructor, _id } = courses;
+    if (loading) {
+        return <Loading></Loading>
+    }
     return (
         <div>
             <div className="flex flex-col  p-6 space-y-6 overflow-hidden rounded-lg shadow-lg bg-gray-50 text-black ">

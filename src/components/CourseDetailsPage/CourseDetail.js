@@ -5,6 +5,7 @@ const CourseDetail = () => {
     const courseDetails = useLoaderData();
     console.log(courseDetails)
     const { rating, total_view, title, image, details, instructor, _id } = courseDetails
+
     return (
         <div>
             <h2 className='text-3xl  text-center font-bold mx-16 my-8 '> {title}</h2>
@@ -54,7 +55,7 @@ const CourseDetail = () => {
                             </button>
                         </div>
                     </div>
-                    <Link to={`/courses/details/${_id}`} type="button" className="flex items-center justify-center w-1/2 mx-auto p-3 font-semibold tracking-wide rounded-md btn-info bg-gradient-to-r from-cyan-600 to-info bg-gray-100">Get Premium Access</Link>
+                    <Link to={`/courses/details/checkout/${_id}`} type="button" className="flex items-center justify-center w-1/2 mx-auto p-3 font-semibold tracking-wide rounded-md btn-info bg-gradient-to-r from-cyan-600 to-info bg-gray-100">Get Premium Access</Link>
                 </div>
             </div>
         </div >

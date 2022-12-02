@@ -16,6 +16,7 @@ const Navbar = () => {
 
 
     const menuItems = <>
+
         <li className='font-bold'><Link to="/">Home</Link></li>
         <li className='font-bold'><Link to="/courses">Courses</Link></li>
         <li className='font-bold'><Link to="/blogs">Blogs</Link></li>
@@ -52,7 +53,15 @@ const Navbar = () => {
                     <img className='w-12' src="https://3.imimg.com/data3/DV/NR/MY-4264932/education-related-solutions-250x250.png" alt="" />
                     <Link to='/' className="btn btn-ghost normal-case text-xl lg:mx-1 pl-1 font-bold text-teal-800">EduCine</Link>
 
-
+                    <label for="Toggle2" className="inline-flex items-center space-x-4 cursor-pointer text-gray-800">
+                        <span>Light</span>
+                        <span className="relative">
+                            <input id="Toggle2" type="checkbox" className="hidden peer" />
+                            <div className="w-10 h-4 rounded-full shadow bg-gray-600 peer-checked:bg-violet-400"></div>
+                            <div className="absolute left-0 w-6 h-6 rounded-full shadow -inset-y-1 peer-checked:right-0 peer-checked:left-auto bg-violet-400"></div>
+                        </span>
+                        <span>Dark</span>
+                    </label>
 
                 </div>
                 <div className="navbar-end hidden lg:flex">

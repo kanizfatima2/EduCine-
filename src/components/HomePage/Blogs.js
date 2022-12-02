@@ -6,7 +6,7 @@ const Blogs = () => {
             <section className=" text-black my-12">
                 <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
 
-                    <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl"></h2>
+                    <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Frequently Asked Questions</h2>
                     <div className="grid gap-10 md:gap-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
                         <div>
                             <h3 className="font-bold text-xl"> What is cors?</h3>

@@ -16,7 +16,7 @@ const Navbar = () => {
 
 
     const menuItems = <>
-        <li className='font-bold'><Link to="/home">Home</Link></li>
+        <li className='font-bold'><Link to="/">Home</Link></li>
         <li className='font-bold'><Link to="/courses">Courses</Link></li>
         <li className='font-bold'><Link to="/blogs">Blogs</Link></li>
         <li className='font-bold'><Link to="/faq">FAQ</Link></li>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
                     </div>
                     <img className='w-12' src="https://3.imimg.com/data3/DV/NR/MY-4264932/education-related-solutions-250x250.png" alt="" />
-                    <Link to='/home' className="btn btn-ghost normal-case text-xl lg:mx-1 pl-1 font-bold text-teal-800">EduCine</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl lg:mx-1 pl-1 font-bold text-teal-800">EduCine</Link>
 
 
 

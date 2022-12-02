@@ -50,23 +50,23 @@ export const router = createBrowserRouter([
             {
                 path: '/courses',
                 element: <AllCourses></AllCourses>,
-                loader: () => fetch(`http://localhost:5000/courses`)
+                loader: () => fetch(`https://b610-learning-platform-server-side-kanizfatima2.vercel.app/courses`)
             },
             {
                 path: '/courses/:id',
                 element: <AllCourses></AllCourses>,
 
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://b610-learning-platform-server-side-kanizfatima2.vercel.app/category/${params.id}`)
             },
             {
                 path: '/courses/details/:id',
                 element: <CourseDetail></CourseDetail>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://b610-learning-platform-server-side-kanizfatima2.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/courses/details/checkout/:id',
                 element: <PrivateRoute><CheckoutPage></CheckoutPage></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://b610-learning-platform-server-side-kanizfatima2.vercel.app/courses/${params.id}`)
             }
         ]
     }

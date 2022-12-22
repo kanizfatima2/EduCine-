@@ -20,7 +20,7 @@ const SignUp = () => {
                 const user = result.user;
                 console.log(user)
                 toast.success('User Created Successfully')
-                navigate('/home')
+                navigate('/')
 
             })
 

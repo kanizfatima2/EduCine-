@@ -17,7 +17,7 @@ const ErrorPage = () => {
                         <p className='text-red-600 py-3 text-center'>{error.status} {error.statusText}</p>
                     </div>)
                 }
-                <Link to='/home' className="px-8 py-3 font-semibold rounded bg-violet-400 text-gray-900">Back to Homepage</Link>
+                <Link to='/' className="px-8 py-3 font-semibold rounded bg-violet-400 text-gray-900">Back to Homepage</Link>
             </div>
 
         </>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-
+import AllCoursesDetails from './AllCoursesDetails';
 
 const AllCourses = () => {
 
